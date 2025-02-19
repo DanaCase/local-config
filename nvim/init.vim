@@ -152,6 +152,10 @@ Plug  'tpope/vim-fugitive'
 "note taking
 Plug  'vimwiki/vimwiki'
 
+"LLM 
+Plug 'zbirenbaum/copilot.lua'
+Plug 'zbirenbaum/copilot-cmp'
+
 
 call plug#end()
 
