@@ -1,15 +1,21 @@
 -- Vimspector
-vim.cmd([[
-nmap <F9> <cmd>call vimspector#Launch()<cr>
-nmap <F5> <cmd>call vimspector#StepOver()<cr>
-nmap <F8> <cmd>call vimspector#Reset()<cr>
-nmap <F11> <cmd>call vimspector#StepOver()<cr>")
-nmap <F12> <cmd>call vimspector#StepOut()<cr>")
-nmap <F10> <cmd>call vimspector#StepInto()<cr>")
-]])
-map('n', "Db", ":call vimspector#ToggleBreakpoint()<cr>")
-map('n', "Dw", ":call vimspector#AddWatch()<cr>")
-map('n', "De", ":call vimspector#Evaluate()<cr>")
+--vim.cmd([[
+--nmap <F9> <cmd>call vimspector#Launch()<cr>
+--nmap <F5> <cmd>call vimspector#StepOver()<cr>
+--nmap <F8> <cmd>call vimspector#Reset()<cr>
+--nmap <F11> <cmd>call vimspector#StepOver()<cr>")
+--nmap <F12> <cmd>call vimspector#StepOut()<cr>")
+--nmap <F10> <cmd>call vimspector#StepInto()<cr>")
+--]])
+--map('n', "Db", ":call vimspector#ToggleBreakpoint()<cr>")
+--map('n', "Dw", ":call vimspector#AddWatch()<cr>")
+--map('n', "De", ":call vimspector#Evaluate()<cr>")
 
 -- FZF
-vim.keymap.set("n", "<c-P>", function() require('fzf-lua').files({ ... }) end, { desc = "Fzf Files" })
+--vim.keymap.set("n", "<c-P>", function() require('fzf-lua').files({ ... }) end, { desc = "Fzf Files" })
+
+-- lsp 
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { noremap = true, silent = true })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true, silent = true })
+

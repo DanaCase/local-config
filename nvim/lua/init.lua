@@ -8,7 +8,8 @@ require("mason").setup({
         },
     }
 })
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup { ensure_installed = { "pyright", }, }
+require 'lspconfig'.pyright.setup {}
 
 -- Rust tools
 local rt = require("rust-tools")
@@ -150,5 +151,9 @@ require("copilot").setup({
   panel = { enabled = false },
 })
 
+
+-- Additional Files
+require("keys")
+require("opts")
 
 
